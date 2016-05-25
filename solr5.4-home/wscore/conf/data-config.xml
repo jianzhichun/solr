@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataConfig>
+<dataSource name="solrDB" type="JdbcDataSource" driver="com.mysql.jdbc.Driver"
+url="jdbc:mysql://localhost:3306/gp"
+ user="root" password="123456"/>
+<document>
+    <entity pk="ID" dataSource="solrDB" name="wstable" 
+    query="select * from wstable">
+        <field column="id" name="id"/>
+        <field column="uri" name="uri"/> 
+        <field column="firstimage" name="firstimage"/> 
+        <field column="title" name="title"/>
+        <field column="title" name="title_py"/>   
+        <field column="author" name="author"/>  
+        <field column="author" name="authorString"/>author        
+        <field column="time1" name="time"/>
+        <field column="description" name="description"/>
+        <field column="content" name="content"/>       
+    </entity>
+</document>
+</dataConfig>
